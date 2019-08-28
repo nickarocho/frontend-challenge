@@ -1,4 +1,4 @@
-#Thanks for applying to Dermstore!
+# Thanks for applying to Dermstore!
 
 - Set aside around 2 hours to complete this challenge.
 - Fork this repo and build your project in your forked repo.

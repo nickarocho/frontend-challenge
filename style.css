@@ -12,8 +12,9 @@ body {
   box-sizing: border-box;
 }
 
-/*--- HERO COMPONENT STYLES ---*/
-.hero {
+/*--- Component Styles ---*/
+.hero,
+.email-signup {
   width: 100vw;
   height: 50vh;
   position: relative;
@@ -44,7 +45,9 @@ body {
   font-size: 2em;
 }
 
-.card__body {
+.card__body,
+label,
+.form__wrapper {
   font-family: "Poppins", sans-serif;
   padding: 1em 0;
   line-height: 1.2em;

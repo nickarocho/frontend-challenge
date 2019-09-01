@@ -14,9 +14,9 @@ fetch(url).then(function(res) {
             <section id="hero" class="hero">
                 <img v-bind:src="backgroundImg" alt="" class="hero__background" />
                 <div class="card">
-                    <h1 class="card__title">{{ payload.title }}</h1>
-                    <p class="card__body">Body</p>
-                    <button href="#" class="card__btn">Click Me</button>
+                    <h1 class="card__title">{{ cardTitle }}</h1>
+                    <p class="card__body">{{ cardBody }}</p>
+                    <button v-bind:src="cardBtnHref" class="card__btn">{{ cardBtnTxt }}</button>
                 </div>
             </section>
         `,

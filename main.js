@@ -15,7 +15,7 @@ fetch(url).then(function(res) {
                 <div class="card">
                     <h1 class="card__title">{{ cardTitle }}</h1>
                     <p class="card__body">{{ cardBody }}</p>
-                    <button v-bind:src="cardBtnHref" class="card__btn">{{ cardBtnTxt }}</button>
+                    <a v-bind:href="cardBtnHref" target="_blank" class="card__btn">{{ cardBtnTxt }}</a>
                 </div>
             </section>
         `,
@@ -34,25 +34,20 @@ fetch(url).then(function(res) {
         template: `
             <section class="email-signup">
                 <form @submit.prevent="onSubmit">
-                <div class="card card--email-signup">
-                    <h1 class="card__title">Email Signup</h1>
-                    <div class="form__wrapper">
-                    <p class="card__body">
-                        <label for="name">Name:</label>
-                        <input id="name" v-model="name" placeholder="Joe Shmoe" />
-                    </p>
-                    <p class="card__body">
-                        <label for="email">Email:</label>
-                        <input
-                        type="email"
-                        id="email"
-                        v-model="email"
-                        placeholder="joe@shmoe.com"
-                        />
-                    </p>
-                    <p><input class="card__btn" type="submit" value="Sign Up" /></p>
+                    <div class="card card--email-signup">
+                        <h1 class="card__title">Email Signup</h1>
+                        <div class="form__wrapper">
+                            <p class="card__body">
+                                <label for="name">Name:</label>
+                                <input id="name" v-model="name" placeholder="Joe Shmoe" />
+                            </p>
+                            <p class="card__body">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" v-model="email" placeholder="joe@shmoe.com" />
+                            </p>
+                            <p><input class="card__btn" type="submit" value="Sign Up" /></p>
+                        </div>
                     </div>
-                </div>
                 </form>
             </section>
         `,

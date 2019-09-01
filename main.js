@@ -6,7 +6,6 @@ fetch(url).then(function(res) {
     .text()
     .then(function(text) {
       payload = JSON.parse(text);
-      console.log(payload);
     })
     .then(function() {
       Vue.component("hero", {

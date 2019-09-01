@@ -30,11 +30,37 @@ fetch(url).then(function(res) {
         }
       });
 
-      var app = new Vue({
-        el: "#app",
-        data: {
-          email: "",
-          name: ""
+      Vue.component("emailsignup", {
+        template: `
+            <section class="email-signup">
+                <form @submit.prevent="onSubmit">
+                <div class="card card--email-signup">
+                    <h1 class="card__title">Email Signup</h1>
+                    <div class="form__wrapper">
+                    <p class="card__body">
+                        <label for="name">Name:</label>
+                        <input id="name" v-model="name" placeholder="Joe Shmoe" />
+                    </p>
+                    <p class="card__body">
+                        <label for="email">Email:</label>
+                        <input
+                        type="email"
+                        id="email"
+                        v-model="email"
+                        placeholder="joe@shmoe.com"
+                        />
+                    </p>
+                    <p><input class="card__btn" type="submit" value="Sign Up" /></p>
+                    </div>
+                </div>
+                </form>
+            </section>
+        `,
+        data() {
+          return {
+            email: "",
+            name: ""
+          };
         },
         methods: {
           onSubmit() {
@@ -42,6 +68,10 @@ fetch(url).then(function(res) {
             form.textContent = "Thank you!";
           }
         }
+      });
+
+      var app = new Vue({
+        el: "#app"
       });
     });
 });

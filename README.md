@@ -10,6 +10,9 @@ Step into the newly cloned directory:
 
 Open the `index.html` file in your favorite browser to see the final product.
 
+![project screenshot](https://i.imgur.com/grnyppU.png "Project Preview")
+
+
 ## My Approach:
 
 This was a lot of fun! Thanks for the challenge, I really enjoyed it.

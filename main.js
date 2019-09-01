@@ -31,7 +31,17 @@ fetch(url).then(function(res) {
       });
 
       var app = new Vue({
-        el: "#app"
+        el: "#app",
+        data: {
+          email: "",
+          name: ""
+        },
+        methods: {
+          onSubmit() {
+            let form = document.querySelector(".form__wrapper");
+            form.textContent = "Thank you!";
+          }
+        }
       });
     });
 });
